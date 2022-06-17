@@ -34,7 +34,7 @@ app.use(
 const server = http.createServer(app);
 const main = async () => {
   try {
-    // await MysqlConecction.sequelize.authenticate();
+    await MysqlConecction.sequelize.authenticate();
     server.listen(parseInt(process.env.PORT_APP));
     console.log("Server - Puerto :" + process.env.PORT_APP);
   } catch (error) {
